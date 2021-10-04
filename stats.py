@@ -1,5 +1,5 @@
 def variance(data):
-    """Returns the population variance of a list (array) of numbers in data.
+    """Return the population variance of a list (array) of numbers in data.
     
     The variance is the sum of squared differences between data values
     and their mean, divided by the number of items in the list (n).
@@ -28,13 +28,13 @@ def variance(data):
     4.0
     """
     # some deliberately misformatted code. Use flake8 to fix.
-    n=len(data)  
-    if n==0:
-        raise TypeError( )
-    average = sum(data)/n
-    return sum( [(x-average)**2 for x in data] )/n
+    n = len(data)
+    if n == 0:
+        raise ValueError("The list is empty")
+    average = sum(data) / n
+    return sum([(x - average) ** 2 for x in data]) / n
+
 
 def stdev(data):
     """The population standard deviation of a list of data values."""
     return sqrt(variance(data))
-
