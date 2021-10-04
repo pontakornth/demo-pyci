@@ -1,6 +1,10 @@
+"""This module contains statistic function."""
+from math import sqrt
+
+
 def variance(data):
     """Return the population variance of a list (array) of numbers in data.
-    
+
     The variance is the sum of squared differences between data values
     and their mean, divided by the number of items in the list (n).
     This is different from the Python library function statistics.variance
@@ -9,10 +13,10 @@ def variance(data):
     Example: variance([1,5]) is ((1-3)**2 + (5-3)**2)/2 = 4.
 
     (These are Google style comments for arguments, returns, and exceptions.)
-    
+
     Args:
-        data: list of numbers for which variance will be computed. 
-           Must contain at least one element.
+        data: list of numbers for which variance will be computed.
+              Must contain at least one element.
     Returns:
         population variance of values in data list.
     Raises:
@@ -36,5 +40,5 @@ def variance(data):
 
 
 def stdev(data):
-    """The population standard deviation of a list of data values."""
+    """Return the population standard deviation of a list of data values."""
     return sqrt(variance(data))
